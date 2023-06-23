@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import NewsItem from './NewsItem'
 import Spinner from './Spinner'
-// import PropTypes from 'prop-types';
 import InfiniteScroll from "react-infinite-scroll-component";
 
 export default function News(props) {
@@ -34,6 +33,7 @@ export default function News(props) {
     useEffect(() => {
         document.title = `NewsApp - ${props.category}`;
         update();
+        // eslint-disable-next-line 
     }, []);
     return (
         <>
@@ -67,9 +67,3 @@ News.defaultProps = {
     pagesize: 9,
     category: "general",
 }
-
-// News.PropTypes = {
-//     country: PropTypes.string,
-//     pagesize: PropTypes.number,
-//     category: PropTypes.string,
-// }
